@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NATURAL SELECTION</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Uriel V" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="shortcut icon" href="./ico/URIO-unscreen.gif" type="image/x-icon"/>
+</head>
+<body>
+
+    <video id="myVideo" width="350px" height="258px" controls autoplay>
+        <source src="./video/thepurgue.mp4" type="video/mp4">
+        Tu navegador es chafa bro, cambia a otro lol.
+    </video>
+
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const video = document.getElementById('myVideo');
+            video.muted = false;
+
+            video.play().catch((error) => {
+                console.log('Reproducción automática de video fallida:', error);
+                // Tratar de reproducir el video con sonido nuevamente al interactuar con la página
+                video.muted = false;
+                video.play();
+            });
+        });
+    </script>
+
+</body>
+</html>
